@@ -18,7 +18,7 @@ function App() {
       {/* Forward slash indicates root path */}
       <Route path="about" element={<About />} />
       <Route path="teachers" element={<Teachers />} />
-      <Route path="courses/*" element={<Courses />}>
+      <Route path="courses" element={<Courses />}>
           <Route path="html" element={<HTML />} />
           <Route path="css" element={<CSS />} />
           <Route path="javascript" element={<JavaScript />} />
