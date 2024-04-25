@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Header from "./components/Header";
 import Teachers from "./components/Teachers";
-import Courses from "./components/Courses"
+import Courses from "./components/Courses";
 
 function App() {
   return (
