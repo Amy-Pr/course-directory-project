@@ -1,8 +1,6 @@
 import React from 'react';
-import {Routes, Route, NavLink} from "react-router-dom";
-import CSS from "./courses/CSS";
-import HTML from "./courses/HTML";
-import JavaScript from "./courses/JavaScript";
+import {NavLink} from "react-router-dom";
+
 
 const Courses = () => (
   <div className="main-content courses">
@@ -14,11 +12,6 @@ const Courses = () => (
         <li><NavLink to="javascript">JavaScript</NavLink></li>
       </ul>
     </div>
-    <Routes>
-      <Route path="html" element={<HTML />} />
-      <Route path="css" element={<CSS />} />
-      <Route path="javascript" element={<JavaScript />} />
-    </Routes>
   </div>
 );
 
