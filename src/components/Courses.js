@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
+import {Outlet, NavLink} from "react-router-dom";
 
 
 const Courses = () => (
@@ -12,6 +12,7 @@ const Courses = () => (
         <li><NavLink to="javascript">JavaScript</NavLink></li>
       </ul>
     </div>
+    <Outlet />
   </div>
 );
 

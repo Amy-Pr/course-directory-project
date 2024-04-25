@@ -5,9 +5,9 @@ import About from "./components/About";
 import Header from "./components/Header";
 import Teachers from "./components/Teachers";
 import Courses from "./components/Courses";
-import CSS from ".components/courses/CSS";
-import HTML from ".components/courses/HTML";
-import JavaScript from ".components/courses/JavaScript";
+import CSS from "./components/courses/CSS";
+import HTML from "./components/courses/HTML";
+import JavaScript from "./components/courses/JavaScript";
 
 function App() {
   return (
