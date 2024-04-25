@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Header from "./components/Header";
@@ -19,6 +19,8 @@ function App() {
       <Route path="about" element={<About />} />
       <Route path="teachers" element={<Teachers />} />
       <Route path="courses" element={<Courses />}>
+      {/* The first Route makes the Courses page default to the HTML content and keeps Courses link active. Also fixes history stack. */}
+          <Route index element={<Navigate replace to="/courses/html"/>}/> 
           <Route path="html" element={<HTML />} />
           <Route path="css" element={<CSS />} />
           <Route path="javascript" element={<JavaScript />} />
