@@ -1,7 +1,17 @@
-import React from 'react';
-import { Link } from "react-router-dom";
+import React, { useRef } from 'react';
+// import { Link } from "react-router-dom";
 
 const Home = () => {
+  const name = useRef();
+  const topic = useRef();
+
+  //Sets the url programmatically when the form is submitted based on user input
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let teacherName = name.current.value;
+    let teacherTopic = topic.current.value;
+    let path = `teachers/${teacherTopic}/${teacherName}`
+  }
 
   return (
     <div className="main-content home">
@@ -18,8 +28,8 @@ const Home = () => {
       <Link to="teachers/CSS/Jimmy-Carr"> Jimmy Carr </Link> */}
 
       <form>
-        <input type="text" placeholder="Name" />
-        <input type="text" placeholder="Topic" />
+        <input type="text" placeholder="Name" ref={name}/>
+        <input type="text" placeholder="Topic" ref={topic}/>
         <button type="submit">Go!</button>
       </form>
 
