@@ -12,7 +12,7 @@ const Home = () => {
       <hr />
 
       <h3>Featured Teachers</h3>
-      <Link to="teachers/HTML/Tommy"> Tommy Wingo </Link>
+      <Link to="teachers/HTML/Tommy-Wingo"> Tommy Wingo </Link>
 
     </div>
   );

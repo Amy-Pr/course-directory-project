@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 
 const Featured = () => {
   let {name, topic} = useParams();
+  name = name.replace('-', ' ');
 
 
   return (
