@@ -8,7 +8,7 @@ import Teachers from "./components/Teachers";
 import Courses from "./components/Courses";
 import CourseContainer from "./components/courses/CourseContainer";
 import NotFound from "./components/NotFound";
-
+import Featured from "./components/Featured";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
       {/* Forward slash indicates root path */}
       <Route path="about" element={<About />} />
       <Route path="teachers" element={<Teachers />} />
+      <Route path="teachers/*" element={<Featured />} />
       <Route path="courses" element={<Courses />}>
       {/* The first Route makes the Courses page default to the HTML content and keeps Courses link active. Setting 'replace' to true also fixes history stack. */}
           <Route index element={<Navigate replace to="/courses/html"/>}/> 
