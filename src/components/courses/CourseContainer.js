@@ -1,8 +1,8 @@
 import React from 'react';
 import Course from './Course';
-import { HTMLCourses } from '../../data/courses';
 
-const HTML = (props) => {
+
+const CourseContainer = (props) => {
   let courses = HTMLCourses.map((course) => {
     return (
       <Course
@@ -22,4 +22,4 @@ const HTML = (props) => {
   );
 }
 
-export default HTML;
+export default CourseContainer;

@@ -1,13 +1,12 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { HTMLCourses, CSSCourses, JSCourses } from './data/courses';
 import Home from "./components/Home";
 import About from "./components/About";
 import Header from "./components/Header";
 import Teachers from "./components/Teachers";
 import Courses from "./components/Courses";
-import CSS from "./components/courses/CSS";
-import HTML from "./components/courses/HTML";
-import JavaScript from "./components/courses/JavaScript";
+import CourseContainer from "./components/courses/CourseContainer";
 import NotFound from "./components/NotFound";
 
 
