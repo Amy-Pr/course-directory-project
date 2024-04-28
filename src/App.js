@@ -18,8 +18,11 @@ function App() {
       <Route path="/" element={<Home />} /> 
       {/* Forward slash indicates root path */}
       <Route path="about" element={<About />} />
-      <Route path="teachers" element={<Teachers />} />
-      <Route path="teachers/:topic/:name" element={<Featured />} />
+      <Route path="teachers"> 
+        <Route index element={<Teachers />} />
+        <Route path=":topic/:name" element={<Featured />} />
+      </Route>
+      
       <Route path="courses" element={<Courses />}>
       {/* The first Route makes the Courses page default to the HTML content and keeps Courses link active. Setting 'replace' to true also fixes history stack. */}
           <Route index element={<Navigate replace to="/courses/html"/>}/> 
