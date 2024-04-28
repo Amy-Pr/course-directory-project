@@ -18,6 +18,8 @@ function App() {
       <Route path="/" element={<Home />} /> 
       {/* Forward slash indicates root path */}
       <Route path="about" element={<About />} />
+
+      {/* Nesting Featured route inside Teachers since they use the same "teachers" path. Using a default child route to the Teachers page to keep it as separate page from Featured.*/}
       <Route path="teachers"> 
         <Route index element={<Teachers />} />
         <Route path=":topic/:name" element={<Featured />} />
@@ -30,6 +32,7 @@ function App() {
           <Route path="css" element={<CourseContainer data={CSSCourses} />} />
           <Route path="javascript" element={<CourseContainer data={JSCourses} />} />
       </Route>
+
       {/* /Renders Page not found page when any other url is used */}
       <Route path="*" element={<NotFound />} />
     </Routes>

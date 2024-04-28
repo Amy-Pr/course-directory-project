@@ -14,6 +14,7 @@ const Courses = () => (
         <Route index element={<Navigate replace to="/404"/>}/> */}
       </ul>
     </div>
+    {/* The Outlet component tells us where any nested routes written inside of App.js should render in the parent component.  */}
     <Outlet />
   </div>
 );
