@@ -10,6 +10,8 @@ const Courses = () => (
         <li><NavLink to="html">HTML</NavLink></li>
         <li><NavLink to="css">CSS</NavLink></li>
         <li><NavLink to="javascript">JavaScript</NavLink></li>
+        {/* Render page not found page if any other url is used. Only use this if using descendent and not nested routes
+        <Route index element={<Navigate replace to="/404"/>}/> */}
       </ul>
     </div>
     <Outlet />
