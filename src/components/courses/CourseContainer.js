@@ -2,8 +2,8 @@ import React from 'react';
 import Course from './Course';
 
 
-const CourseContainer = (props) => {
-  let courses = HTMLCourses.map((course) => {
+const CourseContainer = ({data}) => {
+  let courses = data.map((course) => {
     return (
       <Course
         title={course.title}
