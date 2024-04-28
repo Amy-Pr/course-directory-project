@@ -1,16 +1,19 @@
 import React, { useRef } from 'react';
+import {useNavigate} from "react-router-dom"; //does pretty much the same as Navigate, except this is a hook. See documentation.
 // import { Link } from "react-router-dom";
 
 const Home = () => {
   const name = useRef();
   const topic = useRef();
+  let navigate = useNavigate(); //Hooks can only be called inside the body of a function component -- so can't put useNavigate inside handleSubmit
 
   //Sets the url programmatically when the form is submitted based on user input
   const handleSubmit = (e) => {
     e.preventDefault();
     let teacherName = name.current.value;
     let teacherTopic = topic.current.value;
-    let path = `teachers/${teacherTopic}/${teacherName}`
+    let path = `teachers/${teacherTopic}/${teacherName}`;
+    navigate(path); //Don't want to use "replace" as parameter because we want Home to stay in the history stack
   }
 
   return (
@@ -27,7 +30,7 @@ const Home = () => {
       <Link to="teachers/HTML/Alan-Davies"> Alan Davies </Link>
       <Link to="teachers/CSS/Jimmy-Carr"> Jimmy Carr </Link> */}
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Name" ref={name}/>
         <input type="text" placeholder="Topic" ref={topic}/>
         <button type="submit">Go!</button>
