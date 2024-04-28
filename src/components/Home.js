@@ -12,7 +12,16 @@ const Home = () => {
       <hr />
 
       <h3>Featured Teachers</h3>
-      <Link to="teachers/HTML/Tommy-Wingo"> Tommy Wingo </Link>
+      
+      {/* <Link to="teachers/HTML/Tommy-Wingo"> Tommy Wingo </Link>
+      <Link to="teachers/HTML/Alan-Davies"> Alan Davies </Link>
+      <Link to="teachers/CSS/Jimmy-Carr"> Jimmy Carr </Link> */}
+
+      <form>
+        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="Topic" />
+        <button type="submit">Go!</button>
+      </form>
 
     </div>
   );
